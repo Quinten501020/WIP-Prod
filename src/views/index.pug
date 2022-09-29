@@ -1,0 +1,27 @@
+h1(style='text-align: center;background: #4e73df;color: var(--bs-gray-100);padding: 10px;') Create-Api
+form(method="get", action="/create")  
+  .container(style='margin-top: 98px;')
+    .row
+      .col-md-6
+        h1(style='font-size: 26px;padding: 0px;padding-left: 0;') Action
+        .form-check
+          input#formCheck-2.form-check-input(type='radio' name='action' value="new" onClick="change()" checked)
+          label.form-check-label(for='formCheck-2') New
+        .form-check
+          input#formCheck-1.form-check-input(type='radio' name='action' value="edit" onClick="change()")
+          label.form-check-label(for='formCheck-1') Edit
+        .btn-group(role='group' style='margin: 19px;margin-left: -11px;')
+          button.btn.btn-primary(type='button' style='margin: 4px;' onClick="promptCol('collection')") Add collection
+          button.btn.btn-primary(type='button' style='margin: 4px;' onClick="promptCol('api')") Add api
+          button.btn.btn-primary(type='submit' style='margin: 4px;') Create
+      .col-md-6
+        h1(style='font-size: 20px;padding: 0px;padding-left: 0;padding-top: 17px;') Collection Type
+        select.form-select#dropdown1(name="type" onchange="valuechange()")
+            option(value='COLLECTION' selected='') COLLECTION
+            option(value='API') API
+        h1(style='font-size: 20px;padding: 0px;padding-left: 0;padding-top: 17px;') Name
+        select.form-select#dropdown2(name="name")
+
+link(rel='stylesheet' href='/bootstrap/css/bootstrap.min.css')
+script(src='/bootstrap/js/bootstrap.min.js')
+script(src='/js/main.js')
